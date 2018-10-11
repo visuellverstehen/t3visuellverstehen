@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+     <file source-language="de" datatype="plaintext" original="messages" date="2016-03-29T10:55:51Z" product-name="t3visuellverstehen">
+         <header/>
+         <body>
+            <trans-unit id="tx_t3visuellverstehen_contact_toolbar_item" xml:space="preserve">
+                <source>Wir helfen gern weiter</source>
+            </trans-unit>
+            <trans-unit id="tx_t3visuellverstehen_contact_toolbar_item.email" xml:space="preserve">
+                <source>E-Mail</source>
+            </trans-unit>
+            <trans-unit id="tx_t3visuellverstehen_contact_toolbar_item.telephone" xml:space="preserve">
+                <source>Telefon</source>
+            </trans-unit>
+            <trans-unit id="tx_t3visuellverstehen_contact_toolbar_item.web" xml:space="preserve">
+                <source>Web</source>
+            </trans-unit>
+         </body>
+     </file>
+</xliff>

@@ -1,0 +1,37 @@
+{
+    "name": "visuellverstehen/t3visuellverstehen",
+    "type": "typo3-cms-extension",
+    "description": "Show a small icon in the toolbar to provide support information.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "visuellverstehen",
+            "email": "kontakt@visuellverstehen.de",
+            "homepage": "https://www.visuellverstehen.de"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": ">=8.7 <=9.5",
+        "php": "^7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VV\\T3visuellverstehen\\": "Classes/"
+        }
+    },
+    "scripts": {
+        "extension-release": [
+            "rm .gitignore",
+            "rm .travis.yml",
+            "rm -rf .git",
+            "rm -rf typo3",
+            "rm -rf vendor"
+        ]
+    }
+}
