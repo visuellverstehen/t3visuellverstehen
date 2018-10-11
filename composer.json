@@ -1,7 +1,7 @@
 {
     "name": "visuellverstehen/t3visuellverstehen",
     "type": "typo3-cms-extension",
-    "description": "Show a small icon in the toolbar to provide support information.",
+    "description": "Show a small icon in the TYPO3 backend toolbar to provide support information.",
     "license": "MIT",
     "authors": [
         {
