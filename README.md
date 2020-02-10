@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/visuellverstehen/t3visuellverstehen.svg)](https://travis-ci.org/visuellverstehen/t3visuellverstehen)
+[![Actions](https://github.com/visuellverstehen/t3visuellverstehen/workflows/TER/badge.svg)](https://github.com/visuellverstehen/t3visuellverstehen/actions)
 [![Downloads](https://img.shields.io/packagist/dt/visuellverstehen/t3visuellverstehen.svg)](https://packagist.org/packages/visuellverstehen/t3visuellverstehen)
 
 # t3visuellverstehen
