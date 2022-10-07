@@ -70,7 +70,6 @@ class ContactToolbarItem implements ToolbarItemInterface
         $view->setTemplateRootPaths(['EXT:t3visuellverstehen/Resources/Private/Templates/ToolbarItems']);
         $view->setTemplate($filename);
 
-        $view->getRequest()->setControllerExtensionName('Backend');
         return $view;
     }
 }

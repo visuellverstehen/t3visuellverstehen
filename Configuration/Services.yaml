@@ -1,0 +1,4 @@
+services:
+  VV\T3visuellverstehen\ToolbarItems\ContactToolbarItem:
+    tags:
+      - name: backend.toolbar.item
