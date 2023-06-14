@@ -7,7 +7,7 @@ $GLOBALS['TYPO3_CONF_VARS']['BE']['toolbarItems'][] = \VV\T3visuellverstehen\Too
 $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive($GLOBALS['TYPO3_CONF_VARS'], [
     'EXTENSIONS' => [
         'backend' => [
-            'loginFootnote' => 'Bei Fragen: kontakt@visuellverstehen.de',
+            'loginFootnote' => 'Bei Fragen: hello@visuellverstehen.de',
         ],
     ],
 ]);
