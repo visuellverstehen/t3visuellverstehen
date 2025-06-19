@@ -2,74 +2,52 @@
 
 namespace VV\T3visuellverstehen\ToolbarItems;
 
+use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Backend\Toolbar\ToolbarItemInterface;
+use TYPO3\CMS\Backend\Toolbar\RequestAwareToolbarItemInterface;
+use TYPO3\CMS\Backend\View\BackendViewFactory;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Fluid\View\StandaloneView;
+use TYPO3\CMS\Core\View\ViewInterface;
 
-class ContactToolbarItem implements ToolbarItemInterface
+class ContactToolbarItem implements ToolbarItemInterface, RequestAwareToolbarItemInterface
 {
-    /**
-     * @return bool
-     */
+    private ServerRequestInterface $request;
+
+    public function __construct(private readonly BackendViewFactory $backendViewFactory) {}
+
+    public function setRequest(ServerRequestInterface $request): void
+    {
+        $this->request = $request;
+    }
+
     public function checkAccess(): bool
     {
         return true;
     }
 
-    /**
-     * @return string
-     */
     public function getItem(): string
     {
-        return $this->getFluidTemplateObject('ContactToolbarItem.html')->render();
+        return file_get_contents(GeneralUtility::getFileAbsFileName('EXT:t3visuellverstehen/Resources/Private/Templates/ToolbarItems/ContactToolbarItem.html'));
     }
 
-    /**
-     * @return string
-     */
     public function getDropDown(): string
     {
-        return $this->getFluidTemplateObject('ContactToolbarItemDropDown.html')->render();
+        return $this->backendViewFactory->create($this->request, ['t3visuellverstehen'])
+            ->render('ToolbarItems/ContactToolbarItemDropDown.html');
     }
 
-    /**
-     * @return array
-     */
     public function getAdditionalAttributes(): array
     {
         return [];
     }
 
-    /**
-     * @return bool
-     */
     public function hasDropDown(): bool
     {
         return true;
     }
 
-    /**
-     * @return int
-     */
     public function getIndex(): int
     {
         return 10;
-    }
-
-    /**
-     * Returns a new standalone view, shorthand function
-     *
-     * @param string $filename
-     * @return StandaloneView
-     */
-    protected function getFluidTemplateObject(string $filename): StandaloneView
-    {
-        $view = GeneralUtility::makeInstance(StandaloneView::class);
-        $view->setLayoutRootPaths(['EXT:backend/Resources/Private/Layouts']);
-        $view->setPartialRootPaths(['EXT:backend/Resources/Private/Partials/ToolbarItems']);
-        $view->setTemplateRootPaths(['EXT:t3visuellverstehen/Resources/Private/Templates/ToolbarItems']);
-        $view->setTemplate($filename);
-
-        return $view;
     }
 }
