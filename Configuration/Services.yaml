@@ -1,4 +1,12 @@
 services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  VV\T3visuellverstehen\:
+    resource: '../Classes/*'
+
   VV\T3visuellverstehen\ToolbarItems\ContactToolbarItem:
     tags:
       - name: backend.toolbar.item
